@@ -9,10 +9,10 @@ for i in range((label.shape[1] + 9) // 10):
 mode = ['all', 'part']
 pretrain = ['1', '2', '3']
 
-# 不同模型及优化方式输出图片对比
+# 所有可行的模型及优化方式输出图片对比，共输出7张图片，总共需运行1分钟左右
 for i in range(3):
     for j in range(2):
         ai.generate(label, mode=mode[j], show=True, pretrain=pretrain[i])
 
-# 常规调用
+# 常规调用，速度较快
 ai.generate(label)
